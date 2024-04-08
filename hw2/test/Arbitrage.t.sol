@@ -79,6 +79,18 @@ contract Arbitrage is Test {
         /**
          * Please add your solution below
          */
+        address[] memory path = new address[](4);
+        path[0] = address(tokenB);
+        path[1] = address(tokenA);
+        path[2] = address(tokenD);
+        path[3] = address(tokenB);
+        // console.log(path[0], path[1], path[2], path[3]);
+
+        uint256[] memory results = new  uint256[](4);
+        results = router.swapExactTokensForTokens(5 ether, 1 ether, path, address(router), 1000000);
+        console.log(results[0]);
+        // tokenB.transfer(address(tokenA), 5 ether);
+        // tokenA.transfer(address(tokenD), )
         /**
          * Please add your solution above
          */
