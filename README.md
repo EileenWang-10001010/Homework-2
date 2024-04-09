@@ -67,3 +67,12 @@ When initiating a swap, we can encrypt transaction details(e.g. zk-SNARKs, a zer
 Reference: <br />
 ppt of TA <br />
 https://medium.com/coinmonks/defi-sandwich-attack-explain-776f6f43b2fd
+
+## Bonus
+
+> Solution <br />
+Without updating the liquidity dict, the optimal path is tokenB -> tokenA -> tokenD -> toeknC -> tokenB. <br />
+The amountIn and amountOut pair is:
+(5, 5.655321988655322) -> (5.655321988655322, 2.4587813170979333) -> (2.4587813170979333, 5.0889272933015155) -> (5.0889272933015155, 20.129888944077443) <br />
+Final reward = 20.129888944077443 <br />
+Same Python script is used. <br />
